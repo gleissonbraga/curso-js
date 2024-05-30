@@ -38,3 +38,31 @@ const nomes = personagens.map(function (personagem) {
 const orcs = personagens.filter(function (personagem) {
   return personagem.raca === "Orc"
 })
+
+
+/******************************************************************/
+
+
+// reduce: serve para reduzir um array existente a um valor final qualquer,
+// passando um valor entre cada iteração sobre esse array e retornando ele no final
+const nivelTotal = personagens.reduce(function (acumulador, personagem) {
+  return acumulador + personagem.nivel
+}, 0)
+
+const racas = personagens.reduce(function (acumulador, personagem) {
+  if (acumulador[personagem.raca]) {
+    acumulador[personagem.raca].push(personagem)
+  } else {
+    acumulador[personagem.raca] = [personagem]
+  }
+  return acumulador
+}, {})
+
+
+/******************************************************************/
+
+
+// sort: ordena os elementos de um array a partir de comparações entre duplas de elementos
+personagens.sort(function (a, b) {
+  return a.nivel - b.nivel
+})
