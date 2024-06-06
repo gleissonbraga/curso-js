@@ -14,4 +14,20 @@ document.getElementById('type').addEventListener('click', function() {
     input.setAttribute('type', 'radio')
 })
 
-//PAREI NO VIDEO 18 NO MINUTO 8:53
+// muda o texto do placeholder
+document.getElementById('placeholder').addEventListener('click', function() {
+    input.placeholder = 'Digite algo...'
+})
+
+// desabilita o input
+document.getElementById('disable').addEventListener('click', function() {
+    input.setAttribute('disabled', !input.disabled)
+})
+
+
+document.getElementById('data').addEventListener('click', function() {
+    const data = input.dataset.somethingElse
+    console.log("O valor do atributo data-something é: " + data)
+    input.dataset.somethingElse = 'algum outro valor'
+    console.log("O valor do atributo data-something agora é: " + input.dataset.somethingElse)
+})
