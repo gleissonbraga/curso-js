@@ -19,13 +19,22 @@ const [father, mother] = parents
 
 console.log(father, mother)
 
-function creatUser(person) {
+// utilizando a desestruturação nos parametros de uma função
+
+function creatUser(/* normal: person */ {name, job, parents}) {
     const id = Math.floor(Math.random() * 9999)
     return {
+        // ANTES
+        // id,
+        // name: person.name,
+        // job: person.job,
+        // parents: person.parents
+
+        // DEPOIS DE UTILIZAR A DESESTRUTURAÇÃO
         id,
-        name: person.name,
-        job: person.job,
-        parents: person.parents
+        name,
+        job,
+        parents
     }
 }
 
