@@ -1,0 +1,12 @@
+Baixando o babel 
+
+
+** Os dois realizam a mesma funcionalidade
+
+PRIMEIRA FORMA
+
+npm i -D webpack webpack-cli @babel/core @babel/preset-env babel-loader style-loader css-loader
+
+SEGUNDA FORMA
+
+npm install --save-dev webpack webpack-cli @babel/core @babel/preset-env babel-loader style-loader css-loader
