@@ -5,4 +5,10 @@ class Character {
         this.attack_points = attack_points
         this.defense_points = defense_points
     }
+
+    attack(targetCharacter) {
+        targetCharacter.health_points -= this.attack_points - targetCharacter.defense_points
+    }
 }
+
+module.exports = Character
